@@ -1,0 +1,33 @@
+/* html, body {
+  height: 100%;
+  width: 100%;
+} */
+
+
+/* //////////////////// user's nav bar ///////////////////// */
+
+nav {
+  background-color: rgb(255, 255, 255);
+  text-align: center;
+
+  display: center;
+  justify-content: space-between;
+}
+
+.user-navbar ul,.admin-navbar ul,.detail-navbar ul {
+  list-style: none;
+  background-color: rgb(255, 255, 255);
+  padding: 20px;
+  text-align: center;
+
+  display: inline-block;
+  gap: 10%;
+}
+
+.user-navbar a,.admin-navbar a,.detail-navbar a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* //////////////////// user's nav bar ///////////////////// */

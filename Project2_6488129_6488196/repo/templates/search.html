@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Search Engine</title>
+    </head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./static/global/navbars.css">
+    <link rel="stylesheet" href="./static/global/header-footer.css">
+    <link rel="stylesheet" href="./static/global/result.css">
+    <link rel="stylesheet" href="./static/img/musicbg.jpg">
+     
+
+    <body>
+        <nav class="user-navbar">
+            <ul>
+                <li><a href="/">Search Song</a></li>
+            </ul>
+        </nav>
+    
+        <header>
+            <h1>Search Song</h1>
+        </header>
+    
+        <div class="search">
+            <div class="text">
+                <p>Your search results:</p>
+            </div>
+    
+            {% for doc in hits %}
+                <div class="result-item">
+                    <h2>{{ doc['name'] }}</h2>
+                    <p>{{ doc['author'] }}</p>
+                    <p>{{ doc['releaseYear'] }}</p>
+                    <p>{{ doc['album'] }}</p>
+                    <p>{{ doc['lyrics'] }}</p>
+                    <img src="{{ doc['imageUrl'] }}" alt="Album Cover">
+                    <hr>
+                </div>
+            {% endfor %}
+        </div>
+    
+        <nav aria-label="Page navigation">
+            <ul class="pagination justify-content-center">
+                {% if page_no != 1 %}
+                <li class="page-item"><a class="page-link" href="?keyword={{ keyword }}&page=1">First</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="?keyword={{ keyword }}&page={{ page_no-1 }}" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+                <li class="page-item"><a class="page-link" href="?keyword={{ keyword }}&page={{ page_no-1 }}">{{ page_no-1 }}</a></li>
+                {% endif %}
+                {% if page_total != 1 %}
+                <li class="page-item active"><a class="page-link " href="?keyword={{ keyword }}&page={{ page_no }}">{{ page_no }}</a></li>
+                {% endif %}
+                {% if page_no < page_total %}
+                <li class="page-item"><a class="page-link" href="?keyword={{ keyword }}&page={{ page_no+1 }}">{{ page_no+1 }}</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="?keyword={{ keyword }}&page={{ page_no+1 }}" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+                <li class="page-item"><a class="page-link" href="?keyword={{ keyword }}&page={{ page_total }}">Last</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+    </body>
+</html>

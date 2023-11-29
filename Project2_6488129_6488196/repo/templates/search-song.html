@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./static/global/navbars.css">
+    <link rel="stylesheet" href="./static/global/header-footer.css">
+    <link rel="stylesheet" href="./static/global/search.css">
+    <link rel="stylesheet" href="./static/img/musicbg.jpg">
+    <title>Search</title>
+</head>
+
+<body>
+    <nav class="user-navbar">
+        <ul>
+            <li><a href="/">Search Song</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>Search Song</h1>
+    </header>
+
+    <section class="search">
+        <div class="text">
+            <h2>Search For Song</h2>
+            <h2>Search here!</h2>
+        </div>
+        
+        <!-- please make all buttons orange, including this one! -->
+
+        <div class="search-container" > 
+            <form class="search-bar" method="GET" action="{{ url_for('search') }}">
+                <br>
+                <input class="keyword" type="text" name="keyword" placeholder="Insert Search Term Here." style="text-align: center;">
+                <br>
+                <button type="submit" class="button-search">Search</button>
+                <br>
+            </form>
+        </div>
+
+    </section>
+
+    <section>
+        <div id="results" style="background-color: black;"></div>
+    </section>
+
+    <footer>
+        <p>SEARCH ENGINE FOR SONG</p>
+    </footer>
+</body>
+
+</html>

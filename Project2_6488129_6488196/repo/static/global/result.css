@@ -1,0 +1,59 @@
+body {
+    color: rgb(0, 0, 0);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+    color: white;
+}
+
+.user-navbar {
+    background-color: #333;
+    padding: 10px;
+}
+
+.user-navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.user-navbar li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.search {
+    background-size: cover;
+    padding: 5%;
+    background-color: rgb(255, 255, 255);
+}
+
+.text {
+    text-align: center;
+    font-size: 24px;
+    padding: 3%;
+}
+
+.result-item {
+    margin-bottom: 20px;
+}
+
+.pagination {
+    margin-top: 20px;
+}
+
+.pagination li {
+    display: inline;
+    margin-right: 10px;
+}
+
+.pagination a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+.pagination .active {
+    font-weight: bold;
+    color: #333;
+}

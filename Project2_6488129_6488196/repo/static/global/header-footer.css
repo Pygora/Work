@@ -1,0 +1,46 @@
+header {
+    background-image: url("../img/musicbg.jpg");
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    padding: 13% 50px;
+    font-family: sans-serif;
+    text-align: center;
+
+    /* parallax */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media screen and (max-width: 728px) {
+    header {
+        font-size: 10px;
+        padding: 10% 25px;
+    }
+}
+
+footer {
+    background-image: url("../img/musicbg.jpg");
+    background-color: rgba(255, 253, 253, 0.9); /* Added alpha for a slight transparency */
+    color: #ffffff; /* Darker text color for better readability */
+    padding: 250px 40px 40px 40px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+footer p {
+    text-align: center;
+    color: #fff; /* White text color for better contrast */
+    font-size: small;
+    margin-top: 20px; /* Added margin for better spacing */
+}
+
+/* Adding a subtle shadow for depth */
+footer {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}

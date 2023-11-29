@@ -1,0 +1,82 @@
+*{ /*Set global text to be white to make them visible*/
+	color: rgb(0, 0, 0);
+}
+
+h1{
+	color: white;
+}
+
+li{
+	color: white;
+	padding: 10%;
+	text-align: center;
+}
+
+.search { /*background cover for search section*/
+	background-size: 100%;
+	padding: 10%;
+	background-color:rgb(255, 255, 255);
+}
+
+.text{ /*Decorative text in search section*/
+	text-align: center;
+	font-size: 200%;
+	padding: 3%;
+}
+
+#form-label {
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	gap: 20px;
+}
+
+.search-bar {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+	display: flex;
+	flex-direction: column;
+	border-radius: 60px;
+	width: auto;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.keyword {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+}
+
+.button-search {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.button-search:hover {
+    background-color: #45a049;
+}
+
+.search-bar button:active{ /*Button will change color after clicking*/
+	background-color: rgb(255, 255, 255);
+}
+
+label {
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	color: rgb(0, 0, 0);
+}
